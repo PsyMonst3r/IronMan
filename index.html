@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo Stadium Rally</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="module" src="src/game.js" defer></script>
+</head>
+<body>
+  <div id="ui">
+    <div class="title">Turbo Stadium Rally</div>
+    <div class="hud">
+      <div class="stat">Lap: <span id="lapDisplay">1</span> / 6</div>
+      <div class="stat">Position: <span id="positionDisplay">4th</span></div>
+      <div class="stat">Speed: <span id="speedDisplay">0</span> m/s</div>
+      <div class="stat">Nitro: <span id="nitroDisplay">0%</span></div>
+      <div class="stat">Credits: <span id="creditsDisplay">0</span></div>
+    </div>
+    <div class="mini-leaderboard" id="leaderboard"></div>
+    <div class="message" id="message"></div>
+  </div>
+  <div id="shop" class="hidden">
+    <div class="shop-card">
+      <h2>Speed Shop</h2>
+      <p>Spend your hard-earned credits on upgrades before the next race.</p>
+      <div id="shopCredits"></div>
+      <div class="upgrades" id="upgradeList"></div>
+      <button id="shopContinue">Continue to Next Track</button>
+    </div>
+  </div>
+  <div id="results" class="hidden">
+    <div class="results-card">
+      <h2>Race Results</h2>
+      <ol id="resultsList"></ol>
+      <div id="payout"></div>
+      <button id="resultsContinue">Collect Credits</button>
+    </div>
+  </div>
+  <footer>
+    <p>Controls: Arrow keys or WASD to steer and accelerate, Shift for nitro. Collect money bags for bonus credits and nitro cans for boost refills.</p>
+  </footer>
+</body>
+</html>

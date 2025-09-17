@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, #1c1f3b, #090b19 70%);
+  color: #f6f7ff;
+  font-family: "Orbitron", "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+}
+
+#ui {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 1rem;
+  padding: 0.75rem;
+  background: rgba(15, 20, 36, 0.75);
+  border: 1px solid rgba(120, 174, 255, 0.45);
+  border-radius: 0.65rem;
+  backdrop-filter: blur(6px);
+}
+
+.stat span {
+  font-weight: 700;
+  color: #ffdd55;
+}
+
+.mini-leaderboard {
+  background: rgba(10, 13, 25, 0.75);
+  border-radius: 0.65rem;
+  border: 1px solid rgba(120, 174, 255, 0.25);
+  padding: 0.75rem 1rem;
+  min-width: 220px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.mini-leaderboard h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.mini-leaderboard ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.3rem;
+}
+
+.mini-leaderboard li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.message {
+  min-height: 1.5rem;
+  font-size: 0.95rem;
+  color: #f2f7ff;
+  text-shadow: 0 0 8px rgba(252, 200, 80, 0.6);
+}
+
+#shop, #results {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(1, 3, 8, 0.7);
+  backdrop-filter: blur(4px);
+  z-index: 25;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.shop-card, .results-card {
+  background: linear-gradient(145deg, rgba(30, 38, 66, 0.95), rgba(8, 12, 26, 0.95));
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  width: min(90vw, 420px);
+  border: 1px solid rgba(120, 174, 255, 0.4);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+}
+
+.shop-card h2, .results-card h2 {
+  margin-top: 0;
+}
+
+.upgrades {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.upgrade-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(12, 18, 34, 0.85);
+  border-radius: 0.6rem;
+  border: 1px solid rgba(120, 174, 255, 0.25);
+  padding: 0.75rem;
+}
+
+.upgrade-row button {
+  background: #ff6b5d;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.upgrade-row button:disabled {
+  background: #3b3f53;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.upgrade-row button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 107, 93, 0.35);
+}
+
+button#shopContinue, button#resultsContinue {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.65rem;
+  border: none;
+  background: #53cfff;
+  color: #041019;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button#shopContinue:hover, button#resultsContinue:hover {
+  background: #7fe2ff;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem;
+  background: rgba(5, 7, 17, 0.75);
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
